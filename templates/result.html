@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background: #ecf0f1;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .result-box {
+            background: #fff;
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+        }
+        h2 {
+            font-size: 36px;
+            color: #27ae60;
+            margin-top: 20px;
+        }
+        .label {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2980b9;
+        }
+        a {
+            display: block;
+            margin-top: 30px;
+            color: #2980b9;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="result-box">
+    <h1>Prediction:</h1>
+    <h2>{{ prediction }} ({{ probability }}% Conversion Chance)</h2>
+    <div class="label">Conversion Potential: {{ label }}</div>
+    <a href="/">← Back to Form</a>
+</div>
+</body>
+</html>

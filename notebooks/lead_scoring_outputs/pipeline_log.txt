@@ -1,0 +1,221 @@
+2025-07-17 05:54:24,586 - Dataset loaded: 9240 rows, 37 columns
+2025-07-17 05:54:24,588 - 
+=== Running EDA ===
+2025-07-17 05:54:24,589 - 
+Summary Statistics (Numeric Features):
+2025-07-17 05:54:24,601 -        TotalVisits  Total Time Spent on Website  Page Views Per Visit
+count  9103.000000                  9240.000000           9103.000000
+mean      3.445238                   487.698268              2.362820
+std       4.854853                   548.021466              2.161418
+min       0.000000                     0.000000              0.000000
+25%       1.000000                    12.000000              1.000000
+50%       3.000000                   248.000000              2.000000
+75%       5.000000                   936.000000              3.000000
+max     251.000000                  2272.000000             55.000000
+2025-07-17 05:54:24,622 - 
+Missing Values:
+2025-07-17 05:54:24,626 - Lead Source                                       0.39
+TotalVisits                                       1.48
+Page Views Per Visit                              1.48
+Last Activity                                     1.11
+Country                                          26.63
+Specialization                                   15.56
+How did you hear about X Education               23.89
+What is your current occupation                  29.11
+What matters most to you in choosing a course    29.32
+Tags                                             36.29
+Lead Quality                                     51.59
+Lead Profile                                     29.32
+City                                             15.37
+Asymmetrique Activity Index                      45.65
+Asymmetrique Profile Index                       45.65
+Asymmetrique Activity Score                      45.65
+Asymmetrique Profile Score                       45.65
+dtype: float64
+2025-07-17 05:54:24,633 - 
+Class Distribution (Converted):
+2025-07-17 05:54:24,634 - Converted
+0    61.46
+1    38.54
+Name: proportion, dtype: float64
+2025-07-17 05:54:24,637 - EDA completed. See eda_plots/ for visualizations (from eda_lead_scoring.py).
+2025-07-17 05:54:24,638 - 
+=== Data Cleaning ===
+2025-07-17 05:54:25,241 - Selected features: ['Do Not Email', 'Total Time Spent on Website', 'Lead Source', 'Do Not Call', 'Asymmetrique Profile Score', 'Country', 'Specialization', 'Converted', 'Last Activity', 'Asymmetrique Activity Score', 'Lead Origin']
+2025-07-17 06:00:34,233 - Dataset loaded: 9240 rows, 37 columns
+2025-07-17 06:00:34,235 - Actual columns: ['Prospect ID', 'Lead Number', 'Lead Origin', 'Lead Source', 'Do Not Email', 'Do Not Call', 'Converted', 'TotalVisits', 'Total Time Spent on Website', 'Page Views Per Visit', 'Last Activity', 'Country', 'Specialization', 'How did you hear about X Education', 'What is your current occupation', 'What matters most to you in choosing a course', 'Search', 'Magazine', 'Newspaper Article', 'X Education Forums', 'Newspaper', 'Digital Advertisement', 'Through Recommendations', 'Receive More Updates About Our Courses', 'Tags', 'Lead Quality', 'Update me on Supply Chain Content', 'Get updates on DM Content', 'Lead Profile', 'City', 'Asymmetrique Activity Index', 'Asymmetrique Profile Index', 'Asymmetrique Activity Score', 'Asymmetrique Profile Score', 'I agree to pay the amount through cheque', 'A free copy of Mastering The Interview', 'Last Notable Activity']
+2025-07-17 06:00:34,237 - 
+=== Running EDA ===
+2025-07-17 06:00:34,238 - 
+Summary Statistics (Numeric Features):
+2025-07-17 06:00:34,252 -        TotalVisits  Total Time Spent on Website  Page Views Per Visit  \
+count  9103.000000                  9240.000000           9103.000000   
+mean      3.445238                   487.698268              2.362820   
+std       4.854853                   548.021466              2.161418   
+min       0.000000                     0.000000              0.000000   
+25%       1.000000                    12.000000              1.000000   
+50%       3.000000                   248.000000              2.000000   
+75%       5.000000                   936.000000              3.000000   
+max     251.000000                  2272.000000             55.000000   
+
+       Asymmetrique Activity Score  Asymmetrique Profile Score  
+count                  5022.000000                 5022.000000  
+mean                     14.306252                   16.344883  
+std                       1.386694                    1.811395  
+min                       7.000000                   11.000000  
+25%                      14.000000                   15.000000  
+50%                      14.000000                   16.000000  
+75%                      15.000000                   18.000000  
+max                      18.000000                   20.000000  
+2025-07-17 06:00:34,279 - 
+Missing Values:
+2025-07-17 06:00:34,283 - Lead Source                                       0.39
+TotalVisits                                       1.48
+Page Views Per Visit                              1.48
+Last Activity                                     1.11
+Country                                          26.63
+Specialization                                   15.56
+How did you hear about X Education               23.89
+What is your current occupation                  29.11
+What matters most to you in choosing a course    29.32
+Tags                                             36.29
+Lead Quality                                     51.59
+Lead Profile                                     29.32
+City                                             15.37
+Asymmetrique Activity Index                      45.65
+Asymmetrique Profile Index                       45.65
+Asymmetrique Activity Score                      45.65
+Asymmetrique Profile Score                       45.65
+dtype: float64
+2025-07-17 06:00:34,290 - 
+Class Distribution (Converted):
+2025-07-17 06:00:34,293 - Converted
+0    61.46
+1    38.54
+Name: proportion, dtype: float64
+2025-07-17 06:00:34,300 - EDA completed. Run eda_lead_scoring.py separately for visualizations.
+2025-07-17 06:00:34,305 - 
+=== Data Cleaning ===
+2025-07-17 06:00:35,843 - Selected numeric features based on importance: ['Total Time Spent on Website', 'Asymmetrique Activity Score', 'Asymmetrique Profile Score', 'TotalVisits', 'Page Views Per Visit']
+2025-07-17 06:00:35,848 - Selected features: ['Do Not Email', 'Total Time Spent on Website', 'Lead Source', 'Do Not Call', 'Asymmetrique Profile Index', 'Asymmetrique Profile Score', 'Page Views Per Visit', 'Country', 'Specialization', 'TotalVisits', 'Converted', 'Asymmetrique Activity Index', 'Last Activity', 'Asymmetrique Activity Score', 'Lead Origin']
+2025-07-17 06:00:35,878 - Rows after data selection: 8506 (removed 734 rows)
+2025-07-17 06:00:35,883 - Class distribution: {0: 59.52, 1: 40.48}
+2025-07-17 06:00:35,893 - Removed 236 outliers in TotalVisits
+2025-07-17 06:00:35,903 - Removed 149 outliers in Page Views Per Visit
+2025-07-17 06:00:35,908 - Imputed Lead Origin with 'Unknown'
+2025-07-17 06:00:35,913 - Imputed Lead Source with 'Unknown'
+2025-07-17 06:00:35,918 - Imputed Last Activity with 'Unknown'
+2025-07-17 06:00:35,922 - Imputed Country with 'Unknown'
+2025-07-17 06:00:35,926 - Imputed Specialization with 'Unknown'
+2025-07-17 06:00:35,933 - Imputed Asymmetrique Activity Index with 'Unknown'
+2025-07-17 06:00:35,939 - Imputed Asymmetrique Profile Index with 'Unknown'
+2025-07-17 06:00:35,942 - Imputed TotalVisits with median (3.0)
+2025-07-17 06:00:35,947 - Imputed Page Views Per Visit with median (2.0)
+2025-07-17 06:00:35,954 - Added Is_Imputed column: 3644 rows flagged
+2025-07-17 06:00:35,957 - Created Engagement_Intensity feature
+2025-07-17 06:00:35,961 - Created High_Engagement feature (threshold: 236.0)
+2025-07-17 06:00:35,973 - One-hot encoded Lead Origin
+2025-07-17 06:00:35,983 - One-hot encoded Lead Source
+2025-07-17 06:00:35,991 - One-hot encoded Last Activity
+2025-07-17 06:00:36,003 - One-hot encoded Country
+2025-07-17 06:00:36,010 - One-hot encoded Specialization
+2025-07-17 06:00:36,019 - One-hot encoded Asymmetrique Activity Index
+2025-07-17 06:00:36,026 - One-hot encoded Asymmetrique Profile Index
+2025-07-17 06:00:36,040 - Normalized numeric features: ['Total Time Spent on Website', 'Asymmetrique Profile Score', 'Page Views Per Visit', 'TotalVisits', 'Asymmetrique Activity Score', 'Engagement_Intensity']
+2025-07-17 06:00:36,363 - Saved cleaned dataset to lead_scoring_outputs\cleaned_leads_data.csv
+2025-07-17 06:00:36,367 - 
+=== Modeling ===
+2025-07-17 06:00:36,408 - Failed to train Logistic Regression: could not convert string to float: 'No'
+2025-07-17 06:00:36,413 - Failed to train Random Forest: could not convert string to float: 'No'
+2025-07-17 06:00:36,426 - Failed to train XGBoost: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, the experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:Do Not Email: object, Do Not Call: object
+2025-07-17 06:00:36,431 - No models trained successfully. Aborting.
+2025-07-17 06:00:36,434 - 
+Pipeline completed successfully.
+2025-07-17 12:11:05,169 - Dataset loaded: 9240 rows, 37 columns
+2025-07-17 12:11:05,174 - 
+=== Running EDA ===
+2025-07-17 12:11:05,178 - 
+Summary Statistics (Numeric Features):
+2025-07-17 12:11:05,200 -        TotalVisits  Total Time Spent on Website  Page Views Per Visit
+count  9103.000000                  9240.000000           9103.000000
+mean      3.445238                   487.698268              2.362820
+std       4.854853                   548.021466              2.161418
+min       0.000000                     0.000000              0.000000
+25%       1.000000                    12.000000              1.000000
+50%       3.000000                   248.000000              2.000000
+75%       5.000000                   936.000000              3.000000
+max     251.000000                  2272.000000             55.000000
+2025-07-17 12:11:05,228 - 
+Missing Values:
+2025-07-17 12:11:05,232 - Lead Source                                       0.39
+TotalVisits                                       1.48
+Page Views Per Visit                              1.48
+Last Activity                                     1.11
+Country                                          26.63
+Specialization                                   15.56
+How did you hear about X Education               23.89
+What is your current occupation                  29.11
+What matters most to you in choosing a course    29.32
+Tags                                             36.29
+Lead Quality                                     51.59
+Lead Profile                                     29.32
+City                                             15.37
+Asymmetrique Activity Index                      45.65
+Asymmetrique Profile Index                       45.65
+Asymmetrique Activity Score                      45.65
+Asymmetrique Profile Score                       45.65
+dtype: float64
+2025-07-17 12:11:05,246 - 
+Class Distribution (Converted):
+2025-07-17 12:11:05,249 - Converted
+0    61.46
+1    38.54
+Name: proportion, dtype: float64
+2025-07-17 12:11:05,257 - EDA completed. See eda_plots/ for visualizations (from eda_lead_scoring.py).
+2025-07-17 12:11:05,261 - 
+=== Data Cleaning ===
+2025-07-17 12:11:05,744 - Selected features: ['Do Not Email', 'Total Time Spent on Website', 'Lead Source', 'Do Not Call', 'Asymmetrique Profile Score', 'Country', 'Specialization', 'Converted', 'Last Activity', 'Asymmetrique Activity Score', 'Lead Origin']
+2025-07-17 12:12:26,931 - Dataset loaded: 9240 rows, 37 columns
+2025-07-17 12:12:26,933 - 
+=== Running EDA ===
+2025-07-17 12:12:26,936 - 
+Summary Statistics (Numeric Features):
+2025-07-17 12:12:26,944 -        TotalVisits  Total Time Spent on Website  Page Views Per Visit
+count  9103.000000                  9240.000000           9103.000000
+mean      3.445238                   487.698268              2.362820
+std       4.854853                   548.021466              2.161418
+min       0.000000                     0.000000              0.000000
+25%       1.000000                    12.000000              1.000000
+50%       3.000000                   248.000000              2.000000
+75%       5.000000                   936.000000              3.000000
+max     251.000000                  2272.000000             55.000000
+2025-07-17 12:12:26,964 - 
+Missing Values:
+2025-07-17 12:12:26,967 - Lead Source                                       0.39
+TotalVisits                                       1.48
+Page Views Per Visit                              1.48
+Last Activity                                     1.11
+Country                                          26.63
+Specialization                                   15.56
+How did you hear about X Education               23.89
+What is your current occupation                  29.11
+What matters most to you in choosing a course    29.32
+Tags                                             36.29
+Lead Quality                                     51.59
+Lead Profile                                     29.32
+City                                             15.37
+Asymmetrique Activity Index                      45.65
+Asymmetrique Profile Index                       45.65
+Asymmetrique Activity Score                      45.65
+Asymmetrique Profile Score                       45.65
+dtype: float64
+2025-07-17 12:12:26,975 - 
+Class Distribution (Converted):
+2025-07-17 12:12:26,978 - Converted
+0    61.46
+1    38.54
+Name: proportion, dtype: float64
+2025-07-17 12:12:26,984 - EDA completed. See eda_plots/ for visualizations (from eda_lead_scoring.py).
+2025-07-17 12:12:26,986 - 
+=== Data Cleaning ===
+2025-07-17 12:12:27,213 - Selected features: ['Do Not Email', 'Total Time Spent on Website', 'Lead Source', 'Do Not Call', 'Asymmetrique Profile Score', 'Country', 'Specialization', 'Converted', 'Last Activity', 'Asymmetrique Activity Score', 'Lead Origin']

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lead Conversion Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            padding: 30px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        form {
+            margin-top: 30px;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            margin-top: 25px;
+            background-color: #3498db;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .upload-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid #ddd;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Lead Conversion Prediction</h1>
+
+    <form action="/predict" method="post">
+        {% for col in input_fields %}
+            <label for="{{ col }}">{{ col.replace('_', ' ').title() }}</label>
+            <input type="text" id="{{ col }}" name="{{ col }}">
+        {% endfor %}
+        <input type="submit" value="Predict">
+    </form>
+
+    <div class="upload-section">
+        <h2>Upload CSV File</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".csv"><br><br>
+            <input type="submit" value="Upload and Predict">
+        </form>
+        <a href="/download-template">Download Sample Template</a>
+    </div>
+</div>
+</body>
+</html>
